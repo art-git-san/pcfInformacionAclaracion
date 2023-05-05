@@ -1,8 +1,9 @@
-import React from 'react';
-import { IncidentProps } from '../interfaces/props';
+import React, { useEffect, useRef, useState } from 'react';
+import { incidentProps } from '../interfaces/props';
 
 
-const InformacionAclaracion = (props: IncidentProps) => {
+const InformacionAclaracion = (props: incidentProps) => {
+  const ref = useRef<HTMLDivElement>(null); 
   const { dataIncident } = props;
 
   return <div className='main-shadow'>      
@@ -26,7 +27,7 @@ const InformacionAclaracion = (props: IncidentProps) => {
                         <div className="iac-spn-ali">
                             <span className="iac-ej">Ejecutivo de alta </span>
                             <span className="iac-esc">{dataIncident?.['_createdby_value@OData.Community.Display.V1.FormattedValue']}</span>
-                            <span className="iac-buc">Oficial:</span>
+                            <span className="iac-buc">Oficial: OF-414192</span>
                         </div>  
                     </div>
                     <div className="iac-datos-recs">
@@ -52,22 +53,40 @@ const InformacionAclaracion = (props: IncidentProps) => {
                 <div className="iac-datos-inte-grid">                  
                         <div className="iac-datos-inte-res">
                             <span className="iac-evaluacin-cuestiona">Evaluación cuestionarios:</span>
-                            <span className="iac-cargo-doble"></span>
+                            <span className="iac-cargo-doble">Cargo Doble</span>
                         </div>                   
                         <div className="iac-datos-inte-fl">
                             <span className="iac-tipo-aclaracin">
-                            <span className="text-style-1">Tipo: </span> {dataIncident?.['casetypecode@OData.Community.Display.V1.FormattedValue']}</span>
+                            <span className="text-style-1">Tipo: </span>{dataIncident?.['casetypecode@OData.Community.Display.V1.FormattedValue']}</span>
                         </div>
                         <div className="iac-ta-left">
                                 <span className="iac-tipificacin-compra-2">Tipificación:</span>
                                 <span className="iac-tipificacin-compra"> {dataIncident?.['_cxm_categoriaid_value@OData.Community.Display.V1.FormattedValue']} {dataIncident['_cxm_subcategoriaid_value@OData.Community.Display.V1.FormattedValue']}</span>
                         </div>             
                 </div>
+                {/* <div className="iac-datos-lin"> 
+                    <div className="iac-datos-inte">
+                        <div className="iac-datos-inte-res">
+                            <span className="iac-evaluacin-cuestiona">Evaluación cuestionarios:</span>
+                            <span className="iac-cargo-doble">Cargo Doble</span>
+                        </div>
+                        <div className="iac-datos-inte-di">
+                            <span className="iac-tipo-aclaracin">
+                            <span className="text-style-1">Tipo:</span>{dataIncident?.['casetypecode@OData.Community.Display.V1.FormattedValue']}</span>
+                        </div>
+                        <div className="iac-datos-inte-di">
+                            <div className="iac-datos-tip">
+                                <span className="iac-tipificacin-compra-2">Tipificación:</span>
+                                <span className="iac-tipificacin-compra"> {dataIncident?.['_cxm_categoriaid_value@OData.Community.Display.V1.FormattedValue']} {dataIncident['_cxm_subcategoriaid_value@OData.Community.Display.V1.FormattedValue']}</span>
+                            </div>                             
+                        </div>
+                    </div>
+                </div> */}
                 <div className="iac-datos-inte-grid">                  
                     <div className="iac-datos-col">                         
                             <div className="iac-datos-area">
                                 <span className="iac-total-movimientos">Total Movimientos</span>
-                                <span className="iac-span-mov">{dataIncident?.numberofchildincidents > 0 ? dataIncident?.numberofchildincidents : '1ñ'}</span>
+                                <span className="iac-span-mov">{dataIncident?.numberofchildincidents}</span>
                             </div>
                             <div className="iac-datos-col-lin">
                                 <div className="iac-montost">
@@ -77,13 +96,13 @@ const InformacionAclaracion = (props: IncidentProps) => {
                                     <span className="iac-mxn">
                                       {dataIncident?.['cxm_montototal@OData.Community.Display.V1.FormattedValue']}
                                     </span>   
-                                    <span className="iac-mxntext-style-1"></span>
+                                    <span className="iac-mxntext-style-1">mxn</span>
                                 </div>  
                             </div>                       
                     </div>             
                     <div className="iac-datos-inte-fl">
                            <span className="iac-motor-normativo-Apl">
-                              Motor normativo:<span className="text-style-1">{dataIncident?.cxm_motornormativodescripcion}</span>
+                              Motor normativo:<span className="text-style-1">{dataIncident?.['cxm_montototal@OData.Community.Display.V1.FormattedValue']}</span>
                             </span>
                     </div>
                     <div className="iac-ta-left">
@@ -92,6 +111,38 @@ const InformacionAclaracion = (props: IncidentProps) => {
                          </span>
                     </div>             
                 </div>
+
+                {/* <div className="iac-datos-lin">
+                    <div className="iac-datos-inte">
+                        <div className="iac-datos-col">                         
+                            <div className="iac-datos-area">
+                                <span className="iac-total-movimientos">Total Movimientos</span>
+                                <span className="iac-span-mov">{dataIncident?.numberofchildincidents}</span>
+                            </div>
+                            <div className="iac-datos-col-lin">
+                                <div className="iac-montost">
+                                     <span className="iac-monto-total">Monto total</span>    
+                                </div> 
+                                <div className="iac-montost">
+                                    <span className="iac-mxn">
+                                      {dataIncident?.['cxm_montototal@OData.Community.Display.V1.FormattedValue']}
+                                    </span>   
+                                    <span className="iac-mxntext-style-1">mxn</span>
+                                </div>  
+                            </div>                       
+                        </div>
+                        <div className="iac-datos-inte-di">                      
+                             <span className="iac-motor-normativo-Apl">
+                              Motor normativo:<span className="text-style-1">{dataIncident?.['cxm_montototal@OData.Community.Display.V1.FormattedValue']}</span>
+                            </span>
+                        </div>
+                        <div className="iac-datos-inte-di">                     
+                             <span className="iac-cadena-normativa-TD">
+                              Cadena normativa:<span className="text-style-1">{dataIncident?.cxm_cadenanormativa}</span>
+                              </span>
+                        </div>
+                     </div>
+                </div> */}
             </div>     
          </div>   
   

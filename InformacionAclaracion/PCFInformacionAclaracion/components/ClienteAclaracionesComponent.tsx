@@ -10,12 +10,12 @@ const ClienteAclaraciones = (props: any) => {
   
 
   useEffect(() => {  
-    console.log("ClienteAclaraciones");
-    console.log("id:"+props.context.parameters.PCFInformacionAclaracion.raw);
+    // console.log("ClienteAclaraciones");
+    // console.log("id:"+props.context.parameters.PCFInformacionAclaracion.raw);
     const requestDataClient = async () => {
       const data = await dataService.getDataClient(props.context.parameters.PCFInformacionAclaracion.raw)
       setDataClient(data);  
-      console.log("data:"+data.cxm_clientesensibleaclaraciones);    
+      // console.log("data:"+data.cxm_clientesensibleaclaraciones);    
     };  
     requestDataClient();
   }, [])
