@@ -66,18 +66,35 @@
     background-color: #f6f6f6;
 
     margin-top: 0.5%;
+
+    animation: 1s ease-out 0s 1 slideInFromTop;
 }
 .aclinfo-grid-prod-first{
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 0.3fr;
     border-bottom: 1px solid #ddd;
     height: 48.6px;
+    cursor: pointer;
+    
+}
+.aclinfo-grid-prod-first:hover{
+  background-color: #fcfcfc;
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .aclinfo-grid-prod-second{
     display: grid; 
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 1px solid #ddd;
     height: 48.6px;
+
+    /* animation: 1s ease-out 0s 1 slideInFromTop; */
 }
 .aclinfo-grid-prod-third{
     display: grid; 
@@ -85,6 +102,8 @@
     height: 48.6px; */
     grid-template-columns: 1.5fr 0.7fr 1.3fr 1.2fr 1.2fr 0.7fr 1.2fr 1.2fr 3fr;
     height: 48.66px;
+
+    /* animation: 1s ease-out 0s 1 slideInFromTop; */
 }
 .aclinfo-cell{
     display: flex;
@@ -237,6 +256,12 @@
     /* grid-template-rows: 2fr 2fr 1fr; */
     border-bottom: 1px solid #ddd;
    }
+   .aclinfo-tabla-docs-Not{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 5fr;
+    /* grid-template-rows: 2fr 2fr 1fr; */
+    border-bottom: 1px solid #ddd;
+   }
    .bt-1{
     border-top: 1px solid #ddd;
    }
@@ -287,6 +312,33 @@
     color: #444;
     display: inline-block;
   }
+  .aclinfo-doc-btn{
+    width: 400%;
+    height: 22px;
+    margin: 6px auto;
+    /* padding: 4px 8px; */
+    border-radius: 2px;
+    /* border: solid 1px #32ac65; */
+    border: solid 1px #1c9e52;
+   
+}
+.aclinfo-doc-lbl-btn{
+    width: 51px;
+    height: 11px;
+    /* font-family: OpenSans; */
+    font-size: 8px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1c9e52;  
+    position: relative;
+    /* top: -4px; */
+    margin-left: 13%;
+}
+
    /* /Spans  -----------------------------------------------------------------*/
 /* /Documentos -----------------------------------------------------------------*/
 /* Funciones -----------------------------------------------------------------*/
