@@ -1,0 +1,546 @@
+@import url("../../cxm_CSS_iconsStyle.css");
+@font-face {
+  font-family: "SantanderText";
+  src: url("../../cxm_SantanderRegular.eot.css");
+  src: url("../../cxm_SantanderRegular.eot.css") format("embedded-opentype"), url("../../cxm_SantanderRegular.ttf.css") format("truetype"), url("../../cxm_SantanderRegular.woff.css") format("woff");
+}
+.PCFInformacionAclaracion {
+  width: 100%;
+  margin: 0 -0.75rem;  
+  }
+  
+img.Back-component-Copy {
+  /* width: 100%; */
+  /* margin: 0 -0.75rem; */
+  /* height: 1181px; */
+  /* margin: 16px 16px 32px; */
+  width: 100%;
+  /* position: relative; */
+  /* z-index: 1;
+  display: flex; */
+  font-size: 12px;
+  font-family: SantanderText, Arial, Helvetica, sans-serif;
+
+  padding: 0px !important;
+}
+
+.main-shadow { 
+  /* height: 333px;
+  padding: 0 16px;
+  background-color: white;
+  background-color: #fbfbfb;
+  width: 98%; */
+
+  height: 333px;
+  padding: 0 16px;
+  background-color: white;
+  background-color: #fbfbfb;
+  width: 100%;
+}
+/* .front-shadow {
+  width: 1088px;
+  height: 848px;
+  padding: 0 16px;
+  background-color: var(--white);
+}
+.back-area {
+  width: 1365px;
+  height: 1463px;
+  margin: 38px 1px 0 0;
+  padding: 10px 0 0;
+  background-color: var(--white);
+} */
+/* ----------------------------------------------------------------- */
+.inac-alert {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+.inac-alert button {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  justify-self: end;
+}
+
+.inac-alert-info {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+.inac-alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.inac-alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+[class^=inac] > button:disabled,
+[class^=inac] > button[disabled] {
+  cursor: auto !important;
+  background-color: #dd8484 !important;
+}
+
+.inac-click {
+  cursor: pointer;
+}
+
+.inac-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.inac-main {
+  color: #444;
+  font-family: SantanderText, Arial, Helvetica, sans-serif !important;
+  min-width: 43rem;
+  font-size: 12px;
+  text-align: left;
+}
+/* ----------------------------------------------------------------- */
+/* ---------------------Encabezado---------------------------------- */
+.iac-info{
+  padding-top: 2rem;
+  display: flex;
+  height: 78px;
+}
+.pleca-copy {
+  width: 2px;
+  height: 20px;  
+  margin: 0px 4px 0px 0px;
+  background-color: #ec0000;
+}
+.Title-Copy {
+  width: 217px;
+  height: 20px;
+  margin: 0px 0px 0px 0px;
+  font-family: SantanderText;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.iac-gradient {
+  /* width: 169px;
+  height: 46px;
+  margin: 0px 0px 0px 80%;
+  padding: 0px 0px 0px 10px;
+  border-radius: 4px;
+  border: solid 1px #ececec;
+  background-color: #ffffff;
+  text-align: left; */
+  width: 15%;
+    height: 46px;
+    margin: 0px 0px 0px 63%;
+    padding: 0px 0px 0px 10px;
+    border-radius: 4px;
+    border: solid 1px #ececec;
+    background-color: #ffffff;
+    text-align: left;
+}
+.isan-BAN099 { 
+  margin: 0px 8px 0 0;
+  object-fit: contain;
+  color: #ec0000;
+  font-size: 23px;
+}
+.iac-lkpark{
+  display: flex;
+}
+.iac-gradient-field {
+  width: 73px;
+  height: 14px;
+  margin: 0px 0px 3px 10px;
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color:#767676;
+}
+.iac-gradient-field-1 {
+  width: 73px;
+  height: 14px;
+  margin: 0px 0px 3px 0px;
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color:#767676;
+}
+.iac-gradient-value { 
+  margin: 3px 19px 3px 0px;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+}
+/* ----------------------------------------------------------------- */
+/* -------------------Datos Info---------------------------------------------- */
+.iac-datos{
+ display: grid; 
+ grid-template-columns: repeat(3, 1fr);
+}
+.iac-datos-lin{
+  width: 1px;
+  height: 161px;
+  margin: 0 4px 8px;
+  background-color: #d8d8d8;
+}
+.iac-datos-inte{
+  display: grid; 
+  grid-template-rows: repeat(3, 1fr);
+ 
+  width: 33%;
+  height: 143px;
+  margin: 0 4px 0px;
+  padding: 8px 8px 31px;
+}
+.iac-datos-inte-di{
+  width: 330px;
+  height: 1px;
+  margin: 8px 0;
+  background-color: #ddd;
+}
+.iac-datos-inte-res{
+   display: grid;
+    /* grid-template-rows: repeat(2, 1fr);
+    margin: 0px 0px 0px 0px; */
+    padding: 10px;
+    text-align: left;    
+    border-bottom: 1px solid #ddd;
+    margin: 0 5% 0 5%;
+}
+.iac-datos-col{
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin: 0 5% 0 5%;
+}
+.iac-datos-col-lin{
+  /* width: 4px; */
+  height: 40px;
+  margin: 0px 0 2px;  
+  display: grid;
+  border-left: 1px solid #ddd;
+}
+.iac-datos-area {  
+  display: grid;
+  justify-content: center;
+}
+.iac-datos-recf {
+  width: 346px;
+  height: 50px;
+  margin: 0 4px 0px;
+  padding: 8px 8px 31px;
+  display: flex;
+}
+.iac-spn-ali {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0px 0px 0px 10px;
+}
+
+.iac-oval {
+  width: 40px;
+  height: 40px;
+  margin: 0px 0px 0px 5px;
+  border-radius: 100%;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  font-size: 32px;
+}
+.isan-CHAN028{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.iac-shape {
+  width: 19px;
+  height: 19.1px;
+  background-color: #444444;
+}
+
+
+/* SPAN */
+.iac-ej { 
+  height: 14px;
+  margin: 0 86px 0 8px;
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+}
+.iac-esc {
+  width: 155px; 
+  margin: 5px 0 0 8px;
+  font-family: SantanderText;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.iac-buc {
+  width: 99px;  
+  margin: 5px 0px 0 8px;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+}
+/* SPAN */
+/* SPAN  middle*/
+.iac-evaluacin-cuestiona {
+  /* margin: 5px 200px 0px 0px; */
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+}
+.iac-cargo-doble {  
+  /* margin: 0px 230px 0px 0px; */
+  font-family: SantanderText;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+}
+.iac-tipo-aclaracin {
+  /* margin: 15px 240px 0px 20px; */
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  display: flex;
+}
+.iac-tipo-aclaracin .text-style-1 {
+  color:#767676;
+}
+.iac-tipificacin-compra {
+  /* margin: 0px 0px 0px 10px; */
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  text-align: justify;
+}
+.iac-tipificacin-compra .text-style-1 {
+  color: #767676;
+}
+.iac-tipificacin-compra-2{
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+}
+/* SPAN  middle*/
+/* SPAN  last*/
+.iac-total-movimientos {
+  width: 78px;
+  height: 14px;
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+  /* margin: 0px 0px 0px 40px; */
+  
+}
+.iac-span-mov {
+  /* width: 8px;
+  height: 20px;
+  margin: 0px 0px 0px 80px; */
+  font-family: SantanderText;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+}
+.iac-monto-total {
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+}
+.iac-mxn {
+  width: 111px;
+  height: 26px;
+  font-family: SantanderText;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000;
+}
+.iac-mxntext-style-1 {  
+  margin: 5px 0px 0px 0px;
+  font-family: SantanderText;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000;
+}
+.iac-motor-normativo-Apl { 
+  height: 18px;
+  /* margin: 15px 150px 0px 0px; */
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+  display: flex;
+  /* justify-content: center; */
+}
+.iac-motor-normativo-Apl .text-style-1 {
+  color: #000;
+}
+.iac-cadena-normativa-TD {
+  width: 185px;
+  height: 18px;
+  /* margin: 15px 110px 0px 16px; */
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+  display: flex;
+  /* justify-content: center; */
+}
+.iac-cadena-normativa-TD .text-style-1 {
+  color: #000;
+}
+/* SPAN  last*/
+
+.iac-datos-recs {
+  width: 346px;
+  height: 74px;
+  margin: 0px 0px 0px 0px;
+  padding: 8px 0 8px;
+  display: flex;
+}
+.iac-gradient-dat {
+  width: 169px;
+  height: 46px;
+  border-radius: 4px;
+  border: solid 1px #ececec;
+  background-color: #ffffff;
+  display: flex;
+}
+.iac-gradient-dat-r {
+  width: 169px;
+  height: 46px;
+  border-radius: 4px;
+  border: solid 1px #ececec;
+  background-color: #ffffff;
+}
+.iac-rect-in{
+  margin: 9px 0px 0px 10px;
+  display: flex;
+  line-height: normal;
+}
+.iac-datos-tip{
+  margin: 15px 0px 0px 15px;
+  display: flex;
+  line-height: normal;
+}
+.iac-montost{
+  display: flex;
+  justify-content: center;
+}
+
+.iac-datos-inte-grid{
+  display: grid; 
+  grid-template-rows: 1fr 1fr 1fr;
+  border-left: 1px solid #ddd;
+}
+.iac-datos-inte-fl{
+  
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+
+  padding: 10px;
+  margin: 0 5% 0 5%;
+}
+.iac-ta-left{
+  text-align: left;
+  padding: 10px;
+  margin: 0 5% 0 5%;
+}
+/* ----------------------------------------------------------------- */

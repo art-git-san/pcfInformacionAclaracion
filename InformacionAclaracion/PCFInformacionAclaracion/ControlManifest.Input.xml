@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="CXM" constructor="PCFInformacionAclaracion" version="0.0.1" display-name-key="PCFInformacionAclaracion" description-key="PCFInformacionAclaracion description" control-type="standard" >    
+    <external-service-usage enabled="false">     
+    </external-service-usage>   
+    <property name="PCFInformacionAclaracion" display-name-key="PCFInformacionAclaracion" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />   
+    <resources>
+      <code path="index.ts" order="1"/>  
+      <css path="css/PCFInformacionAclaracion.css" order="1" />   
+      <css path="css/PCFClienteAclaraciones.css" order="1" />   
+      <css path="css/pcfMovimientos.css" order="1" />  
+       <css path="../../cxm_CSS_iconsStyle.css" order="1"/>
+      <css path="../../cxm_iconsSantander.eot.css" order="1"/>
+      <css path="../../cxm_iconsSantander.svg.css" order="1"/>
+      <css path="../../cxm_iconsSantander.ttf.css" order="1"/>
+      <css path="../../cxm_iconsSantander.woff.css" order="1"/>
+      <css path="../../cxm_santanderRegular.woff.css" order="1"/>
+      <css path="../../cxm_santanderRegular.eot.css" order="1"/>
+      <css path="../../cxm_santanderRegular.ttf.css" order="1"/>   
+    </resources>   
+  </control>
+</manifest>
