@@ -46,7 +46,8 @@ const Producto = (props: incidentProps) => {
             </div>
             <div className="aclinfo-cell">
                 <div className="aclinfo-cell-div cell-div-mt"></div> 
-                <div className="aclinfo-btn"><span className="aclinfo-lbl-btn">CONCILIADO</span></div> 
+                {/* <div className="aclinfo-btn"><span className={dataIncident.cxm_tipoestatustransaccion==1 ? "aclinfo-lbl-btn" : "aclinfo-lbl-btn acli-ml"}>{dataIncident.cxm_tipoestatustransaccion==1? "CONCILIADO" : "NO CONCILIADO"}</span></div>  */}
+                <div className="aclinfo-btn"><span className="aclinfo-lbl-btn">{dataIncident.cxm_tipoestatustransaccion==1? "CONCILIADO" : "NO CONCILIADO"}</span></div> 
             </div>
             <div className="aclinfo-cell">
                 <div className="aclinfo-cell-div cell-div-mt"></div>  
@@ -61,8 +62,7 @@ const Producto = (props: incidentProps) => {
                 <div className="aclinfo-cell-div cell-div-mt"></div>   
                 <div className='aclinfo-cell-padding'> 
                     <div className="aclinfo-cell-lbls">             
-                        <span className="aclinfo-lbl">ESTABLECIMIENTO DE COMPRA</span>
-                        {/* <span className="aclinfo-lbl-val-grape">SUPER VASCO DE QUIROGA MEXICO DF 000 MX</span>                       */}
+                        <span className="aclinfo-lbl">ESTABLECIMIENTO DE COMPRA</span>                      
                         <span className="aclinfo-lbl-val-grape">{dataMovimiento.ubicacionComercio}</span>    
                     </div>                   
                 </div>     
@@ -78,7 +78,7 @@ const Producto = (props: incidentProps) => {
                 <div className='aclinfo-cell-padding'> 
                     <div className="aclinfo-cell-lbls">             
                         <span className="aclinfo-lbl">DESCRIPCIÓN DE TOKENS</span>
-                        <span className="aclinfo-lbl-val">Aquí está considerado para la infomación de texto de la descripción de tokens</span>
+                        <span className="aclinfo-lbl-val">{dataIncident.cxm_cadenanormativa}</span>
                     </div>  
                 </div>  
             </div> 
@@ -87,7 +87,7 @@ const Producto = (props: incidentProps) => {
                 <div className='aclinfo-cell-padding'>  
                     <div className="aclinfo-cell-lbls">                
                         <span className="aclinfo-lbl">DESCRIPCIÓN DE MOTOR</span>
-                        <span className="aclinfo-lbl-val">Aquí está considerado para la infomación de texto de la descripción de motor</span>
+                        <span className="aclinfo-lbl-val">{dataIncident.cxm_motornormativodescripcion}</span>
                     </div>
                 </div>  
             </div>   
@@ -97,7 +97,7 @@ const Producto = (props: incidentProps) => {
                 <div className='aclinfo-cell-padding'>               
                     <div className="aclinfo-cell-lbls">
                         <span className="aclinfo-lbl">ESTATUS DE TARJETA</span>
-                        <span className="aclinfo-lbl-val">BLOQUE TEMPORAL</span>
+                        <span className="aclinfo-lbl-val">{dataIncident?.['cxm_estatusplastico@OData.Community.Display.V1.FormattedValue']}</span>
                     </div>
                 </div>  
             </div>
@@ -115,7 +115,7 @@ const Producto = (props: incidentProps) => {
                 <div className='aclinfo-cell-padding'>
                     <div className="aclinfo-cell-lbls">
                         <span className="aclinfo-lbl">FECHA DE ESTATUS</span>
-                        <span className="aclinfo-lbl-val">07 ENE 2023</span>
+                        <span className="aclinfo-lbl-val">{getFormatFecha(dataIncident.cxm_fechaestatusplastico)}</span>
                     </div>  
                 </div>    
             </div>
@@ -124,7 +124,7 @@ const Producto = (props: incidentProps) => {
                 <div className='aclinfo-cell-padding'>   
                     <div className="aclinfo-cell-lbls">
                         <span className="aclinfo-lbl">TIPO DE ABONO</span>
-                        <span className="aclinfo-lbl-val">TEMPORAL</span>
+                        <span className="aclinfo-lbl-val">{dataIncident?.['cxm_tipoabono@OData.Community.Display.V1.FormattedValue']}</span>
                     </div>  
                 </div>    
             </div>
@@ -133,7 +133,7 @@ const Producto = (props: incidentProps) => {
                 <div className='aclinfo-cell-padding'> 
                     <div className="aclinfo-cell-lbls">
                         <span className="aclinfo-lbl">TIPO DE COMPRA</span>
-                        <span className="aclinfo-lbl-val">{dataMovimiento.tipoCargo}</span>
+                        <span className="aclinfo-lbl-val">{dataIncident?.['cxm_tipocargo@OData.Community.Display.V1.FormattedValue']}</span>
                     </div>  
                 </div>    
             </div>
