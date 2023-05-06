@@ -112,7 +112,7 @@ export class DataService {
        fake_cedularesolutoria:"TDC",     
       cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
       cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
-       "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
+       "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Posteado",
        cxm_tipocasoalta:1,
        "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Aclaración",
        cxm_tipoestatustransaccion:1,
@@ -128,306 +128,7 @@ export class DataService {
       }
     return {} as any;
   }
-
-  // async getDataAclaracion(): Promise<any> {   
-  //   let reqData = await this.requestGet("/api/data/v9.2/incidents(" +  this.getIncidentId() + ")?$select=_createdby_value,_cxm_categoriaid_value,_cxm_subcategoriaid_value,casetypecode,_cxm_motornormativoid_value,cxm_cadenanormativa,cxm_montototal,cxm_fechaestimadacierre,numberofchildincidents,cxm_sys_jsonmovimiento,cxm_sys_jsonproducto,cxm_tipocasoalta")       
-  //   if (reqData.ok)
-  //     return reqData.data
-  //   else if (typeof Xrm === "undefined")
-  //     return {
-        
-  //         "@odata.context": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/$metadata#incidents(incidentid,incident_parent_incident(cxm_tipocasoalta))",
-  //         "value": [
-  //           {
-  //             "@odata.etag": "W/\"272148184\"",
-  //             "incidentid": "19fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //             "incident_parent_incident": [
-  //               {
-  //                 "@odata.etag": "W/\"272148784\"",
-  //                 "cxm_tipocasoalta": 3,
-  //                 "_parentcaseid_value": "19fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //                 "incidentid": "65fcf1b5-39e9-ed11-a7c6-6045bd0388ff"
-  //               },
-  //               {
-  //                 "@odata.etag": "W/\"272148794\"",
-  //                 "cxm_tipocasoalta": 3,
-  //                 "_parentcaseid_value": "19fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //                 "incidentid": "b0fcf1b5-39e9-ed11-a7c6-6045bd0388ff"
-  //               }
-  //             ],
-  //             "incident_parent_incident@odata.nextLink": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/incidents(19fcf1b5-39e9-ed11-a7c6-6045bd0388ff)/incident_parent_incident?$select=cxm_tipocasoalta"
-  //           }
-  //         ]     
-      
-  //     }
-  //   return {} as any;
-  // }
-  // async getDataAclaracion(): Promise<any> {   
-  //   let reqData = await this.requestGet("/api/data/v9.2/incidents(" +  this.getIncidentId() + ")?$select=_createdby_value,_cxm_categoriaid_value,_cxm_subcategoriaid_value,casetypecode,_cxm_motornormativoid_value,cxm_cadenanormativa,cxm_montototal,cxm_fechaestimadacierre,numberofchildincidents,cxm_sys_jsonmovimiento,cxm_sys_jsonproducto,cxm_tipocasoalta")       
-  //   if (reqData.ok)
-  //     return reqData.data
-  //   else if (typeof Xrm === "undefined")
-  //     return {
-        
-  //       "@odata.context": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/$metadata#incidents(incidentid,incident_parent_incident(incidentid,incident_parent_incident(cxm_tipocasoalta)))",
-  //       "value": [
-  //         {
-  //           "@odata.etag": "W/\"272148146\"",
-  //           "incidentid": "f3fbf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //           "incident_parent_incident": [
-  //             {
-  //               "incidentid": "19fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {
-  //                   "cxm_tipocasoalta": 3,
-  //                   "incidentid": "65fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //                 },
-  //                 {
-  //                   "cxm_tipocasoalta": 3,
-  //                   "incidentid": "b0fcf1b5-39e9-ed11-a7c6-6045bd0388ff"
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               "incidentid": "32fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {
-  //                   "cxm_tipocasoalta": 3,
-  //                   "incidentid": "93fcf1b5-39e9-ed11-a7c6-6045bd0388ff"
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               "incidentid": "4cfcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {
-  //                   "cxm_tipocasoalta": 3,
-  //                   "incidentid": "53bbecbb-39e9-ed11-a7c6-6045bd0388ff"
-  //                 }
-  //               ]
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     }
-  //   return {} as any;
-  // }
-
-  // async getDataAclaracionMovs(): Promise<any> {   
-  //   let reqData = await this.requestGet("/api/data/v9.2/incidents(" +  this.getIncidentId() + ")?$select=_createdby_value,_cxm_categoriaid_value,_cxm_subcategoriaid_value,casetypecode,_cxm_motornormativoid_value,cxm_cadenanormativa,cxm_montototal,cxm_fechaestimadacierre,numberofchildincidents,cxm_sys_jsonmovimiento,cxm_sys_jsonproducto,cxm_tipocasoalta")       
-  //   if (reqData.ok)
-  //     return reqData.data
-  //   else if (typeof Xrm === "undefined")
-  //     return {
-        
-  //       "@odata.context": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/$metadata#incidents(incidentid,incident_parent_incident(incidentid,incident_parent_incident(cxm_tipocasoalta)))",
-  //       "value": [
-  //         {
-  //           "@odata.etag": "W/\"272148146\"",
-  //           "incidentid": "f3fbf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //           "incident_parent_incident": [
-  //             {
-  //               "incidentid": "19fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {
-  //                   // "cxm_tipocasoalta": 3,
-  //                   // "incidentid": "65fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //                   "_createdby_value@OData.Community.Display.V1.FormattedValue":"EDGAR URQUIZU FRANCO",
-  //                   "_createdby_value@Microsoft.Dynamics.CRM.lookuplogicalname":"systemuser",
-  //                   _createdby_value:"29e5eb6c-1db1-ed11-83fd-6045bd038b42",
-  //                   "_cxm_categoriaid_value@OData.Community.Display.V1.FormattedValue":"Tarjeta de Crédito",
-  //                   "_cxm_categoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_categoria",    
-  //                   _cxm_categoriaid_value:"51682b0e-a22f-ed11-9db1-00224806bd15",
-  //                   "_cxm_subcategoriaid_value@OData.Community.Display.V1.FormattedValue":"Compra No Reconocida - Nacional",   
-  //                   "_cxm_subcategoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_subcateg",
-  //                   _cxm_subcategoriaid_value:"13f5eccf-492d-ed11-9db1-0022480872ec",
-  //                   "casetypecode@OData.Community.Display.V1.FormattedValue":"Aclaración",
-  //                   casetypecode:1,
-  //                   "_cxm_motornormativoid_value@OData.Community.Display.V1.FormattedValue":"CXM-NORM-0018",
-  //                   "_cxm_motornormativoid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_mst_acl_motor",
-  //                   _cxm_motornormativoid_value:"57729b22-80a2-ed11-aad0-6045bd03864d",
-  //                   cxm_cadenanormativa:"TDC:Cancelación",
-  //                   "cxm_montototal@OData.Community.Display.V1.FormattedValue":"$4,179.82",
-  //                  cxm_montototal:4179.82,
-  //                  cxm_fechaestimadacierre:"25-10-2022",   
-  //                  numberofchildincidents:1,
-  //                  fake_cedularesolutoria:"TDC",     
-  //                 cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                 cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
-  //                  "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
-  //                  cxm_tipocasoalta: 3                
-  //                 },
-  //                 {
-  //                   // "cxm_tipocasoalta": 3,
-  //                   // "incidentid": "b0fcf1b5-39e9-ed11-a7c6-6045bd0388ff"
-  //                   "_createdby_value@OData.Community.Display.V1.FormattedValue":"EDGAR URQUIZU FRANCO",
-  //                   "_createdby_value@Microsoft.Dynamics.CRM.lookuplogicalname":"systemuser",
-  //                   _createdby_value:"29e5eb6c-1db1-ed11-83fd-6045bd038b42",
-  //                   "_cxm_categoriaid_value@OData.Community.Display.V1.FormattedValue":"Tarjeta de Crédito",
-  //                   "_cxm_categoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_categoria",    
-  //                   _cxm_categoriaid_value:"51682b0e-a22f-ed11-9db1-00224806bd15",
-  //                   "_cxm_subcategoriaid_value@OData.Community.Display.V1.FormattedValue":"Compra No Reconocida - Nacional",   
-  //                   "_cxm_subcategoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_subcateg",
-  //                   _cxm_subcategoriaid_value:"13f5eccf-492d-ed11-9db1-0022480872ec",
-  //                   "casetypecode@OData.Community.Display.V1.FormattedValue":"Aclaración",
-  //                   casetypecode:1,
-  //                   "_cxm_motornormativoid_value@OData.Community.Display.V1.FormattedValue":"CXM-NORM-0018",
-  //                   "_cxm_motornormativoid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_mst_acl_motor",
-  //                   _cxm_motornormativoid_value:"57729b22-80a2-ed11-aad0-6045bd03864d",
-  //                   cxm_cadenanormativa:"TDC:Cancelación",
-  //                   "cxm_montototal@OData.Community.Display.V1.FormattedValue":"$4,189.82",
-  //                  cxm_montototal:4189.82,
-  //                  cxm_fechaestimadacierre:"25-10-2022",   
-  //                  numberofchildincidents:1,
-  //                  fake_cedularesolutoria:"TDC",     
-  //                 cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                 cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
-  //                  "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
-  //                  cxm_tipocasoalta: 3                
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               "incidentid": "32fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {
-  //                   // "cxm_tipocasoalta": 3,
-  //                   // "incidentid": "93fcf1b5-39e9-ed11-a7c6-6045bd0388ff"
-  //                   "_createdby_value@OData.Community.Display.V1.FormattedValue":"EDGAR URQUIZU FRANCO",
-  //                   "_createdby_value@Microsoft.Dynamics.CRM.lookuplogicalname":"systemuser",
-  //                   _createdby_value:"29e5eb6c-1db1-ed11-83fd-6045bd038b42",
-  //                   "_cxm_categoriaid_value@OData.Community.Display.V1.FormattedValue":"Tarjeta de Crédito",
-  //                   "_cxm_categoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_categoria",    
-  //                   _cxm_categoriaid_value:"51682b0e-a22f-ed11-9db1-00224806bd15",
-  //                   "_cxm_subcategoriaid_value@OData.Community.Display.V1.FormattedValue":"Compra No Reconocida - Nacional",   
-  //                   "_cxm_subcategoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_subcateg",
-  //                   _cxm_subcategoriaid_value:"13f5eccf-492d-ed11-9db1-0022480872ec",
-  //                   "casetypecode@OData.Community.Display.V1.FormattedValue":"Aclaración",
-  //                   casetypecode:1,
-  //                   "_cxm_motornormativoid_value@OData.Community.Display.V1.FormattedValue":"CXM-NORM-0018",
-  //                   "_cxm_motornormativoid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_mst_acl_motor",
-  //                   _cxm_motornormativoid_value:"57729b22-80a2-ed11-aad0-6045bd03864d",
-  //                   cxm_cadenanormativa:"TDC:Cancelación",
-  //                   "cxm_montototal@OData.Community.Display.V1.FormattedValue":"$4,199.82",
-  //                  cxm_montototal:4199.82,
-  //                  cxm_fechaestimadacierre:"25-10-2022",   
-  //                  numberofchildincidents:1,
-  //                  fake_cedularesolutoria:"TDC",     
-  //                 cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                 cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
-  //                  "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
-  //                  cxm_tipocasoalta: 3                
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               "incidentid": "4cfcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {
-  //                   // "cxm_tipocasoalta": 3,
-  //                   // "incidentid": "53bbecbb-39e9-ed11-a7c6-6045bd0388ff"
-  //                   "_createdby_value@OData.Community.Display.V1.FormattedValue":"EDGAR URQUIZU FRANCO",
-  //                   "_createdby_value@Microsoft.Dynamics.CRM.lookuplogicalname":"systemuser",
-  //                   _createdby_value:"29e5eb6c-1db1-ed11-83fd-6045bd038b42",
-  //                   "_cxm_categoriaid_value@OData.Community.Display.V1.FormattedValue":"Tarjeta de Crédito",
-  //                   "_cxm_categoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_categoria",    
-  //                   _cxm_categoriaid_value:"51682b0e-a22f-ed11-9db1-00224806bd15",
-  //                   "_cxm_subcategoriaid_value@OData.Community.Display.V1.FormattedValue":"Compra No Reconocida - Nacional",   
-  //                   "_cxm_subcategoriaid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_cat_acl_subcateg",
-  //                   _cxm_subcategoriaid_value:"13f5eccf-492d-ed11-9db1-0022480872ec",
-  //                   "casetypecode@OData.Community.Display.V1.FormattedValue":"Aclaración",
-  //                   casetypecode:1,
-  //                   "_cxm_motornormativoid_value@OData.Community.Display.V1.FormattedValue":"CXM-NORM-0018",
-  //                   "_cxm_motornormativoid_value@Microsoft.Dynamics.CRM.lookuplogicalname":"cxm_mx_mst_acl_motor",
-  //                   _cxm_motornormativoid_value:"57729b22-80a2-ed11-aad0-6045bd03864d",
-  //                   cxm_cadenanormativa:"TDC:Cancelación",
-  //                   "cxm_montototal@OData.Community.Display.V1.FormattedValue":"$4,209.82",
-  //                  cxm_montototal:4209.82,
-  //                  cxm_fechaestimadacierre:"25-10-2022",   
-  //                  numberofchildincidents:1,
-  //                  fake_cedularesolutoria:"TDC",     
-  //                 cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                 cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
-  //                  "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
-  //                  cxm_tipocasoalta: 3                
-  //                 }
-  //               ]
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     }
-  //   return {} as any;
-  // }
-
-  // async getDataAclaracionMovs(tipoCaso:number): Promise<any> {   
-  //   // let reqData = await this.requestGet("/api/data/v9.2/incidents(" +  this.getIncidentId() + ")?$select=_createdby_value,_cxm_categoriaid_value,_cxm_subcategoriaid_value,casetypecode,_cxm_motornormativoid_value,cxm_cadenanormativa,cxm_montototal,cxm_fechaestimadacierre,numberofchildincidents,cxm_sys_jsonmovimiento,cxm_sys_jsonproducto,cxm_tipocasoalta")       
-  //   // let reqData = await this.requestGet("/api/data/v9.2/incidents?$select=incidentid&$expand=incident_parent_incident($select=incidentid;$expand=incident_parent_incident($select=cxm_sys_jsonmovimiento,cxm_sys_jsonproducto))&$filter=(incidentid eq " +  this.getIncidentId() + ") and (incident_parent_incident/any(o1:(o1/incidentid ne null) and (o1/incident_parent_incident/any(o2:(o2/incidentid ne null)))))")
-  //   let query: string="";
-  //   switch (tipoCaso) {
-  //     case 1:
-  //       query="/api/data/v9.2/incidents?$select=incidentid&$expand=incident_parent_incident($select=incidentid;$expand=incident_parent_incident($select=cxm_sys_jsonmovimiento,cxm_sys_jsonproducto))&$filter=(incidentid eq " +  this.getIncidentId() + ") and (incident_parent_incident/any(o1:(o1/incidentid ne null) and (o1/incident_parent_incident/any(o2:(o2/incidentid ne null)))))"
-  //         break;
-  //     case 2:
-  //       query="/api/data/v9.2/incidents?$select=incidentid&$expand=incident_parent_incident($select=cxm_sys_jsonmovimiento,cxm_sys_jsonproducto)&$filter=(incidentid eq " +  this.getIncidentId() + ") and (incident_parent_incident/any(o1:(o1/incidentid ne null)))"
-  //         break;
-  //     case 3:
-  //       query="/api/data/v9.2/incidents?$select=incidentid&$expand=incident_parent_incident($select=cxm_sys_jsonmovimiento,cxm_sys_jsonproducto)&$filter=(incidentid eq " +  this.getIncidentId() + ") and (incident_parent_incident/any(o1:(o1/incidentid ne null)))"
-  //         break;          
-  //   }
-  //   let reqData = await this.requestGet(query)
-  //   if (reqData.ok)
-  //     return reqData.data
-  //   else if (typeof Xrm === "undefined")
-  //     return {
-        
-  //       "@odata.context": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/$metadata#incidents(incidentid,incident_parent_incident(incidentid,incident_parent_incident(cxm_tipocasoalta)))",
-  //       "value": [
-  //         {
-  //           "@odata.etag": "W/\"272148146\"",
-  //           "incidentid": "f3fbf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //           "incident_parent_incident": [
-  //             {
-  //               "incidentid": "19fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {                    
-  //                   cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD02","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}'
-               
-  //                 },
-  //                 {                   
-  //                   cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}'
-                       
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               "incidentid": "32fcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {                  
-  //                   cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}'
-                    
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               "incidentid": "4cfcf1b5-39e9-ed11-a7c6-6045bd0388ff",
-  //               "incident_parent_incident": [
-  //                 {                  
-  //                   cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"09/26/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD02","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD02","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
-  //                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}'
-                  
-  //                 }
-  //               ]
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     }
-  //   return {} as any;
-  // }
+  
   async getDataAclaracionMovs(tipoCaso:number): Promise<any> {  
     let query: string="";
     switch (tipoCaso) {
@@ -480,7 +181,7 @@ export class DataService {
                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
                    "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
                    cxm_tipocasoalta: 3,
-                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Aclaración",
+                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Posteado",
                    cxm_tipoestatustransaccion:1,
                    cxm_motornormativodescripcion:"test",
                    "cxm_estatusplastico@OData.Community.Display.V1.FormattedValue":"Bloqueo temporal",
@@ -521,8 +222,8 @@ export class DataService {
                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
                    "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
                    cxm_tipocasoalta: 3,
-                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Aclaración",
-                   cxm_tipoestatustransaccion:1,
+                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"No Posteado",
+                   cxm_tipoestatustransaccion:2,
                    cxm_motornormativodescripcion:"test",
                    "cxm_estatusplastico@OData.Community.Display.V1.FormattedValue":"Bloqueo temporal",
                    cxm_estatusplastico:1,
@@ -564,7 +265,7 @@ export class DataService {
                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
                    "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
                    cxm_tipocasoalta: 3,
-                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Aclaración",
+                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Posteado",
                    cxm_tipoestatustransaccion:1,
                    cxm_motornormativodescripcion:"test",
                    "cxm_estatusplastico@OData.Community.Display.V1.FormattedValue":"Bloqueo temporal",
@@ -607,7 +308,7 @@ export class DataService {
                   cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
                    "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Movimiento",
                    cxm_tipocasoalta: 3,
-                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Aclaración",
+                   "cxm_tipoestatustransaccion@OData.Community.Display.V1.FormattedValue":"Posteado",
                    cxm_tipoestatustransaccion:1,
                    cxm_motornormativodescripcion:"test",
                    "cxm_estatusplastico@OData.Community.Display.V1.FormattedValue":"Bloqueo temporal",
