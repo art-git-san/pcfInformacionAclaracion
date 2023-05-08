@@ -111,7 +111,8 @@
 .aclinfo-cell-bgc{  
   height: 97%;
   display: grid;
-  background-color:  #f6f6f6;;
+  background-color:  #f6f6f6;
+  justify-content: center;
 }
 .aclinfo-cell-div{  
     width: 1px;
@@ -391,7 +392,7 @@
   display: grid; 
   grid-template-columns: 3.7fr 6fr;  
   height: 68px;
-  padding: 2%;
+  padding: 2% 0 2% 0%;
 }
 /* new--------------------------------------------------------- */
 

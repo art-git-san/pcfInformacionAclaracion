@@ -6,11 +6,17 @@ import { DataMovimiento } from '../../interfaces/general';
 
 const Producto = (props: incidentProps) => {
     const [isActive, setIsActive] = useState(true);
-    const { dataIncident } = props;
+    const { dataIncident } = props;    
     const getFormatFecha = (fecha:any) => {
-        let date= new Date(fecha);   
-        const meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];         
-        return  date.getDate() +" "+  meses[date.getMonth()] +" "+ date.getFullYear();        
+        let formatFecha: string="";
+        console.log("Fecha f:");
+        console.log(fecha);
+        if(fecha!=null){
+            let date= new Date(fecha);   
+            const meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+            formatFecha=date.getDate() +" "+  meses[date.getMonth()] +" "+ date.getFullYear(); 
+        }      
+        return  formatFecha;     
     }     
     let dataMovimiento: DataMovimiento = JSON.parse(dataIncident?.cxm_sys_jsonmovimiento);  
     let dataProducto: DataProducto = JSON.parse(dataIncident?.cxm_sys_jsonproducto);
