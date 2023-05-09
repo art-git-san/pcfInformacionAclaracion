@@ -1,65 +1,44 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { DataClient, Dynamics } from '../interfaces/general';
-import { DataService } from '../services/getData.services'; 
+import { CatalogoIndicadores, DataIndicadoresCliente } from '../interfaces/general';
+import { DataService } from '../services/getData.services';
 
 const ClienteAclaraciones = (props: any) => {
-    const ref = useRef<HTMLDivElement>(null); 
+  const ref = useRef<HTMLDivElement>(null);
 
   const dataService = new DataService();
-  const [dataClient, setDataClient] = useState<DataClient>();
-  
+  const [catalogoIndicadores, setCatalogoIndicadores] = useState<CatalogoIndicadores[]>();
 
-  useEffect(() => {  
-    // console.log("ClienteAclaraciones");
-    // console.log("id:"+props.context.parameters.PCFInformacionAclaracion.raw);
-    const requestDataClient = async () => {
-      const data = await dataService.getDataClient(props.context.parameters.PCFInformacionAclaracion.raw)
-      setDataClient(data);  
-      // console.log("data:"+data.cxm_clientesensibleaclaraciones);    
-    };  
-    requestDataClient();
+  useEffect(() => {
+
+    const requestCatalogoIndicadores = async () => {
+      const dataIndicadoresClient = await dataService.getDataIndicadoresCliente(props.context.parameters.PCFInformacionAclaracion.raw)
+      const dataIndicadores = await dataService.getCatalogoIndicadores();
+      const indicadores = dataIndicadores.value.map((val: CatalogoIndicadores) => ({ 
+        cxm_name: val.cxm_name,
+        cxm_icono: val.cxm_icono,
+        cxm_mx_cat_acl_indicadorid: val.cxm_mx_cat_acl_indicadorid,
+        activo: dataIndicadoresClient.value.some((e: DataIndicadoresCliente)=> e._cxm_indicadorid_value == val.cxm_mx_cat_acl_indicadorid),
+      }));
+      setCatalogoIndicadores(indicadores);
+      console.log('dataIndicadores: ', dataIndicadores);
+    };
+    requestCatalogoIndicadores();
   }, [])
 
-  
-    return (
-      <div className='clacl-indicadores'>
-        {dataClient &&
-          <>            
-            <div className={dataClient.cxm_clientereincidenteaclaraciones ? "clacl-verde" : "clacl-gris"}>
-              <div className='clacl-oval'>
-                <i className='isan-FUNC069'></i>
-              </div>
-              <span>Reincidente</span>
-            </div>
-            <div className={dataClient.cxm_clientevulnerableaclaraciones ? "clacl-verde" : "clacl-gris"}>
-              <div className='clacl-oval'>
-                <i className='isan-CHAN031'></i>
-              </div>
-              <span>Vulnerable</span>
-            </div>
-            <div className={dataClient.cxm_clienterecurrenteaclaraciones ? "clacl-verde" : "clacl-gris"}>
-              <div className='clacl-oval'>
-                <i className='isan-FUNC069'></i>
-              </div>
-              <span>Recurrente</span>
-            </div>
-            <div className={dataClient.cxm_clientesensibleaclaraciones ? "clacl-verde" : "clacl-gris"}>
-              <div className='clacl-oval'>
-                <i className='isan-SERV104'></i>
-              </div>
-              <span>Sensible</span>
-            </div>
-            <div className={dataClient.fake_clientelistasnegrasaclaraciones ? "clacl-verde" : "clacl-gris"}>
-              <div className='clacl-oval'>
-                <i className='isan-FUNC121'></i>
-              </div>
-              <span>Listas negras</span>
-            </div>           
-          </>
-        }
-      </div>
-    );
-  
+  return (
+    <div className='clacl-indicadores' style={{gridTemplateColumns: 'repeat('+catalogoIndicadores?.length+', 1fr)'}}>
+      {
+        catalogoIndicadores?.map((indicador, idm: number) => {
+          return <div className={indicador.activo ? "clacl-verde" : "clacl-gris"}>
+          <div className='clacl-oval'>
+            <i className={indicador.cxm_icono ? 'isan-' + indicador.cxm_icono : 'isan-CHAN031'}></i>
+          </div>
+          <span>{indicador.cxm_name}</span>
+        </div>
+        })
+      }
+    </div>
+  );
 }
 
 export default ClienteAclaraciones;

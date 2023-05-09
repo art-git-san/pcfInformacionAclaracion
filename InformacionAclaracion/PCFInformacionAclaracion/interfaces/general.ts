@@ -11,13 +11,11 @@ export interface DataClient {
    cxm_clientevulnerableaclaraciones: boolean; 
    cxm_clienterecurrenteaclaraciones: boolean; 
    cxm_clientesensibleaclaraciones: boolean; 
-   fake_clientelistasnegrasaclaraciones: boolean; 
-   
- }
- export interface DataResponseIn {
-  incidents:DataIncident
+}
 
- }
+export interface DataResponseIn {
+  incidents:DataIncident
+}
 
 export interface DataIncident {
   '@odata.context': string;
@@ -41,9 +39,6 @@ export interface DataIncident {
   cxm_montototal:number; 
   cxm_fechaestimadacierre:string;
   numberofchildincidents :number;
-   //FAKE
-  fake_cedularesolutoria:string;
-
   //New
   cxm_sys_jsonmovimiento:string;
   cxm_sys_jsonproducto:string;
@@ -59,31 +54,13 @@ export interface DataIncident {
   "cxm_tipoabono@OData.Community.Display.V1.FormattedValue":string;
   cxm_tipoabono:number;
   "cxm_tipocargo@OData.Community.Display.V1.FormattedValue":string;
-  cxm_tipocargo:number;     
+  cxm_tipocargo:number;   
+  cxm_vozcliente: string;
+  _cxm_usuarioaltaid_value: string;
+  _cxm_unidadnegocioid_value: string;
+  "_cxm_unidadnegocioid_value@OData.Community.Display.V1.FormattedValue": string;
 }
 
-
-export interface IndicadoresI {
-  incidentid: string,
-  'cxm_tipocolectivouniversidad@OData.Community.Display.V1.FormattedValue': string;
-  cxm_tipocolectivouniversidad: number;
-  'cxm_tipodigital@OData.Community.Display.V1.FormattedValue': string;
-  cxm_tipodigital: number;
-  'cxm_tipoempleado@OData.Community.Display.V1.FormattedValue': string;
-  cxm_tipoempleado: number;
-  'cxm_tipoindicadorriesgo@OData.Community.Display.V1.FormattedValue': string;
-  cxm_tipoindicadorriesgo: number;
-  'cxm_tiposantanderpersonal@OData.Community.Display.V1.FormattedValue': string;
-  cxm_tiposantanderpersonal: number;
-  'cxm_tipocliente@OData.Community.Display.V1.FormattedValue': string;
-  cxm_tipocliente: number;
-  'cxm_tiponominabiente@OData.Community.Display.V1.FormattedValue': string;
-  cxm_tiponominabiente: number;
-  cxm_mx_det_per_kpiid: string;
-  cxm_claveoficialsantanderpersonal: string | null,
-  cxm_correoelectronicosantanderpersonal: string | null,
-  cxm_nombresantanderpersonal: string | null,
-}
 export interface DataMovimientos {
   cxm_sys_jsonmovimiento:string;
   cxm_sys_jsonproducto:string;
@@ -132,5 +109,20 @@ export interface DataDocumentos {
   'cxm_procedencia@OData.Community.Display.V1.FormattedValue':string;
   cxm_procedencia:number; 
   cxm_mx_mst_acl_matz_documentoid:string
+}
 
+export interface DataArbolOficiales {
+  cxm_claveoficial:string;
+  cxm_mx_cat_usu_arbol_oficialid:string;
+}
+
+export interface CatalogoIndicadores {
+  cxm_name:string;
+  cxm_icono:string;
+  cxm_mx_cat_acl_indicadorid:string;
+  activo: boolean;
+}
+
+export interface DataIndicadoresCliente {
+  _cxm_indicadorid_value:string;
 }

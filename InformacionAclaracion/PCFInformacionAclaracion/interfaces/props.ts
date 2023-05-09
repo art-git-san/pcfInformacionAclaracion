@@ -1,6 +1,4 @@
-import { DataIncident, DataProducto, DataMovimiento } from './general';
-export interface incidentProps{
+import { DataIncident } from './general';
+export interface IncidentProps{
   dataIncident: DataIncident
-  // dataMovimiento: DataMovimiento;
-  // dataProducto: DataProducto;
 }
