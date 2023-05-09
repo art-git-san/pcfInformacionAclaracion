@@ -71,7 +71,9 @@ const InformacionAclaracion = (props: IncidentProps) => {
                     </div>
                     <div className="iac-datos-inte-fl">
                         <span className="iac-tipo-aclaracin">
-                            <span className="text-style-1">Tipo: </span> {dataIncident?.['casetypecode@OData.Community.Display.V1.FormattedValue']}</span>
+                            <span className="text-style-1">Tipo: </span>
+                            <span>{dataIncident?.['casetypecode@OData.Community.Display.V1.FormattedValue']}</span>
+                        </span>
                     </div>
                     <div className="iac-ta-left">
                         <span className="iac-tipificacin-compra-2">Tipificación:</span>
@@ -82,7 +84,7 @@ const InformacionAclaracion = (props: IncidentProps) => {
                     <div className="iac-datos-col">
                         <div className="iac-datos-area">
                             <span className="iac-total-movimientos">Total Movimientos</span>
-                            <span className="iac-span-mov">{dataIncident?.numberofchildincidents > 0 ? dataIncident?.numberofchildincidents : '1ñ'}</span>
+                            <span className="iac-span-mov">{dataIncident?.numberofchildincidents > 0 ? dataIncident?.numberofchildincidents : '1'}</span>
                         </div>
                         <div className="iac-datos-col-lin">
                             <div className="iac-montost">

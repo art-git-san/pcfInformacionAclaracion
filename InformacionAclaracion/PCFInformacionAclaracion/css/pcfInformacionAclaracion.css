@@ -404,9 +404,7 @@ img.Back-component-Copy {
   
 }
 .iac-span-mov {
-  /* width: 8px;
-  height: 20px;
-  margin: 0px 0px 0px 80px; */
+  text-align: center;
   font-family: SantanderText;
   font-size: 14px;
   font-weight: bold;

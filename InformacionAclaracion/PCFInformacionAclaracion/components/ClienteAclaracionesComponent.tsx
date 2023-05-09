@@ -11,6 +11,7 @@ const ClienteAclaraciones = (props: any) => {
   useEffect(() => {
 
     const requestCatalogoIndicadores = async () => {
+      console.log('props.context.parameters.PCFInformacionAclaracion.raw', props.context.parameters.PCFInformacionAclaracion.raw);
       const dataIndicadoresClient = await dataService.getDataIndicadoresCliente(props.context.parameters.PCFInformacionAclaracion.raw)
       const dataIndicadores = await dataService.getCatalogoIndicadores();
       const indicadores = dataIndicadores.value.map((val: CatalogoIndicadores) => ({ 
