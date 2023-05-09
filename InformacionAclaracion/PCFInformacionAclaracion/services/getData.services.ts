@@ -74,7 +74,6 @@ export class DataService {
         "cxm_clientevulnerableaclaraciones": false,
         "cxm_clienterecurrenteaclaraciones": false,
         "cxm_clientesensibleaclaraciones": true,
-        "fake_clientelistasnegrasaclaraciones":false,
       }
     return {} as any;
   }
@@ -83,7 +82,7 @@ export class DataService {
     return id.substring(1, id.length - 1);
   }
   async getDataAclaracion(): Promise<DataIncident> {   
-    let reqData = await this.requestGet("/api/data/v9.2/incidents(" +  this.getIncidentId() + ")?$select=_createdby_value,_cxm_categoriaid_value,_cxm_subcategoriaid_value,casetypecode,_cxm_motornormativoid_value,cxm_cadenanormativa,cxm_montototal,cxm_fechaestimadacierre,numberofchildincidents,cxm_sys_jsonmovimiento,cxm_sys_jsonproducto,cxm_tipocasoalta,cxm_tipoestatustransaccion,cxm_motornormativodescripcion,cxm_estatusplastico,cxm_fechaestatusplastico,cxm_tipoabono,cxm_tipocargo")       
+    let reqData = await this.requestGet("/api/data/v9.2/incidents(" +  this.getIncidentId() + ")?$select=_createdby_value,_cxm_categoriaid_value,_cxm_subcategoriaid_value,casetypecode,_cxm_motornormativoid_value,cxm_cadenanormativa,cxm_montototal,cxm_fechaestimadacierre,numberofchildincidents,cxm_sys_jsonmovimiento,cxm_sys_jsonproducto,cxm_tipocasoalta,cxm_tipoestatustransaccion,cxm_motornormativodescripcion,cxm_estatusplastico,cxm_fechaestatusplastico,cxm_tipoabono,cxm_tipocargo,_cxm_usuarioaltaid_value,_cxm_unidadnegocioid_value,cxm_vozcliente")       
     if (reqData.ok)
       return reqData.data
     else if (typeof Xrm === "undefined")
@@ -109,7 +108,6 @@ export class DataService {
        cxm_montototal:4179.82,
        cxm_fechaestimadacierre:"25-10-2022",   
        numberofchildincidents:1,
-       fake_cedularesolutoria:"TDC",     
       cxm_sys_jsonmovimiento:'{"comercio":"CINEPOLIS DULCE","codigo":"CODPROD010","refer":"REFPROD010E87MK9I1823LS","sia":"SIAPROD010","tarjeta":"física","ubicacionComercio":"CDMX","tecnCobro":"CHIP","promocion":"18M S/INT","tipoCargo":"CONSUMO","monto":3048.97,"comercioSeguro":false,"canal":"01","factura":"1001","fechaMov":"04/20/2023, 9:45:01 AM","centroCostos":"1234","tokens":{"c0":"] C045878 1234561890123","c4":"] C400012 102210003660","p0":"] P056789 1234007890123","q2":"] Q200002 07"},"sucursal":"SUCURSALPROD010","status":"en proceso","numOperacion":"0","numFact":"0","idxProd":0,"idxMov":0,"tipoProd":"PROD01","JSONprod":{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}}',
       cxm_sys_jsonproducto:'{"id":0,"pan":"379911302571584","idMovimientos":0,"name":"SANTANDER AMEX ORO **** 1584","estadoCuenta":"VIGENTE","fechaCorte":"05/12/2022","fechaActivacion":"26/06/2018","fechaVencimiento":"20/08/2023","fechaAlta":"26/06/2018","sucursalAltaId":"4161","sucursalAltaNombre":"PRINCIPAL NARANJOS","activa":true,"tipoProd":"PROD01","datos":[{"title":"PRODUCTO","value":"SANTANDER AMEX ORO"},{"title":"ESTADO","value":"VIGENTE"},{"title":"SUCURSAL DE APERTURA","value":"PRINCIPAL NARANJOS"},{"title":"CONTRATO","value":"730000001120"},{"title":"FECHA DE ALTA","value":"26/06/2018"},{"title":"FECHA DE ACTIVACIÓN","value":"26/06/2018"},{"title":"PLASTICO VÁLIDO AL","value":"20/08/2023"}],"saldoPago":[{"title":"FECHA DE CORTE","value":"05/12/2022"},{"title":"FECHA DE PAGO","value":"10/12/2022"},{"title":"PAGO PARA NO GENERAR INTERÉS","value":"39269.77"},{"title":"PAGO MÍNIMO","value":"600"},{"title":"SALDO","value":"39269.77"},{"title":"FECHA DE ÚLTIMA TRANSACCIÓN","value":"18/11/2022"}],"idxProd":0,"flags":{"allMovs":false,"roboExtravio":false,"pagoNoAplicado":false,"servicio":"","searchTxt":"","searchCompra":"","searchFecha":"","searchTarjeta":""},"movPerPage":25,"montoAclr":0}',
        "cxm_tipocasoalta@OData.Community.Display.V1.FormattedValue":"Posteado",
@@ -123,12 +121,14 @@ export class DataService {
        "cxm_tipoabono@OData.Community.Display.V1.FormattedValue":"Temporal",
        cxm_tipoabono:1,
       "cxm_tipocargo@OData.Community.Display.V1.FormattedValue":"Nacional",
-       cxm_tipocargo:1      
-      
+       cxm_tipocargo:1,
+       cxm_vozcliente:"Cargo Doble",
+       _cxm_usuarioaltaid_value: "94480bf9-ea8d-ed11-81ac-6045bd019be7",
+       _cxm_unidadnegocioid_value: "",
+       "_cxm_unidadnegocioid_value@OData.Community.Display.V1.FormattedValue": "TDC"
       }
     return {} as any;
   }
-  
   async getDataAclaracionMovs(tipoCaso:number): Promise<any> {  
     let query: string="";
     switch (tipoCaso) {
@@ -360,6 +360,98 @@ export class DataService {
             }
           ]
         }      
+    return {} as any;
+  }
+
+  async getDataArbolOficiales(usuarioId: any): Promise<any> {
+    let reqData = await this.requestGet("/api/data/v9.2/cxm_mx_cat_usu_arbol_oficials?$select=cxm_claveoficial&$filter=_cxm_usuarioid_value eq " + usuarioId)
+    if (reqData.ok)
+      return reqData.data
+    else if (typeof Xrm === "undefined")
+      return {
+        "@odata.context": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/$metadata#cxm_mx_cat_usu_arbol_oficials(cxm_claveoficial)",
+        "value": [
+          {
+            "@odata.etag": "W/\"270187354\"",
+            "cxm_claveoficial": "PP98",
+            "cxm_mx_cat_usu_arbol_oficialid": "94480bf9-ea8d-ed11-81ac-6045bd019be7"
+          }
+        ]
+      }     
+    return {} as any;
+  }
+
+  async getCatalogoIndicadores(): Promise<any> {
+    let reqData = await this.requestGet("api/data/v9.2/cxm_mx_cat_acl_indicadors?$select=cxm_icono,cxm_name")
+    if (reqData.ok)
+      return reqData.data
+    else if (typeof Xrm === "undefined")
+      return {
+        "@odata.context": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/$metadata#cxm_mx_cat_acl_indicadors(cxm_icono,cxm_name)",
+        "value": [
+          {
+            "cxm_icono": "FUNC069",
+            "cxm_name": "Cliente Reincidente",
+            "cxm_mx_cat_acl_indicadorid": "4b1d1271-26da-ed11-a7c7-000d3a590965"
+          },
+          {
+            "cxm_icono": "CHAN031",
+            "cxm_name": "Cliente vulnerable",
+            "cxm_mx_cat_acl_indicadorid": "324e597f-26da-ed11-a7c7-000d3a590965"
+          },
+          {
+            "cxm_icono": "FUNC069",
+            "cxm_name": "Cliente recurrente",
+            "cxm_mx_cat_acl_indicadorid": "3ae57e85-26da-ed11-a7c7-000d3a590965"
+          },
+          {
+            "cxm_icono": "SERV104",
+            "cxm_name": "Cliente Sensible",
+            "cxm_mx_cat_acl_indicadorid": "d51d838b-26da-ed11-a7c7-000d3a590965"
+          },
+          {
+            "cxm_icono": "FUNC121",
+            "cxm_name": "Lista Negra",
+            "cxm_mx_cat_acl_indicadorid": "f01d838b-26da-ed11-a7c7-000d3a590965"
+          },
+          {
+            "cxm_icono": "FUNC121",
+            "cxm_name": "Zona roja",
+            "cxm_mx_cat_acl_indicadorid": "4f8c8291-26da-ed11-a7c7-000d3a590965"
+          }
+        ]
+      }    
+    return {} as any;
+  }
+
+  async getDataIndicadoresCliente(clientId: any): Promise<any> {
+    const fechaActual = new Date();
+    console.log('fechaActual', fechaActual);
+    let reqData = await this.requestGet("/api/data/v9.2/cxm_mx_det_acl_indicadorclientes?$select=_cxm_contactid_value,createdon,_cxm_indicadorid_value&$filter=(_cxm_contactid_value eq " + clientId +" and createdon ge 2022-05-08T23:13:00.000Z)&$orderby=_cxm_indicadorid_value asc")
+    if (reqData.ok)
+      return reqData.data
+    else if (typeof Xrm === "undefined")
+      return {
+        "@odata.context": "https://mx-evolucioncxm-dyn-dev.crm.dynamics.com/api/data/v9.2/$metadata#cxm_mx_det_acl_indicadorclientes(_cxm_contactid_value,createdon,_cxm_indicadorid_value)",
+        "value": [
+          {
+            "_cxm_contactid_value": "d81a80be-52f9-ec11-bb3d-6045bd0076b9",
+            "_cxm_indicadorid_value": "3ae57e85-26da-ed11-a7c7-000d3a590965",
+          },
+          {
+            "_cxm_contactid_value": "d81a80be-52f9-ec11-bb3d-6045bd0076b9",
+            "_cxm_indicadorid_value": "4b1d1271-26da-ed11-a7c7-000d3a590965",
+          },
+          {
+            "_cxm_contactid_value": "d81a80be-52f9-ec11-bb3d-6045bd0076b9",
+            "_cxm_indicadorid_value": "4b1d1271-26da-ed11-a7c7-000d3a590965",
+          },
+          {
+            "_cxm_contactid_value": "d81a80be-52f9-ec11-bb3d-6045bd0076b9",
+            "_cxm_indicadorid_value": "4b1d1271-26da-ed11-a7c7-000d3a590965",
+          }
+        ]
+      }
     return {} as any;
   }
 

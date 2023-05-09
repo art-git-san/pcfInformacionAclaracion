@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { DataClient, DataProducto, Dynamics } from '../../interfaces/general';
 import Documentos from '../Movimientos/DocumentosComponent';
-import { incidentProps } from '../../interfaces/props';
+import { IncidentProps } from '../../interfaces/props';
 import { DataMovimiento } from '../../interfaces/general';
 
-const Producto = (props: incidentProps) => {
+const Producto = (props: IncidentProps) => {
     const [isActive, setIsActive] = useState(true);
     const { dataIncident } = props;    
     const getFormatFecha = (fecha:any) => {
