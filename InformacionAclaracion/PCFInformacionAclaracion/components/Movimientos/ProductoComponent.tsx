@@ -9,8 +9,6 @@ const Producto = (props: IncidentProps) => {
     const { dataIncident } = props;    
     const getFormatFecha = (fecha:any) => {
         let formatFecha: string="";
-        console.log("Fecha f:");
-        console.log(fecha);
         if(fecha!=null){
             let date= new Date(fecha);   
             const meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];

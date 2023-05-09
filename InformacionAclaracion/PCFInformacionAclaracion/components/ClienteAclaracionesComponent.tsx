@@ -11,16 +11,12 @@ const ClienteAclaraciones = (props: IncidentProps) => {
   useEffect(() => {
 
     const requestCatalogoIndicadores = async () => {
-      console.log('dataIncident', dataIncident);
       const fechaActual = new Date();
-      console.log('fechaActual', fechaActual);
       fechaActual.setFullYear(fechaActual.getFullYear() -1);
       const fechaConsulta = fechaActual.toISOString().slice(0, 10);
-      console.log(fechaConsulta);
+
       const dataIndicadoresClient = await dataService.getDataIndicadoresCliente(dataIncident._customerid_value, fechaConsulta);
-      console.log('dataIndicadoresClient: ', dataIndicadoresClient);
       const dataIndicadores = await dataService.getCatalogoIndicadores();
-      console.log('dataIndicadores: ', dataIndicadores);
       const indicadores = dataIndicadores.value.map((val: CatalogoIndicadores) => ({ 
         cxm_name: val.cxm_name,
         cxm_icono: val.cxm_icono,
@@ -28,7 +24,6 @@ const ClienteAclaraciones = (props: IncidentProps) => {
         activo: dataIndicadoresClient.value.some((e: DataIndicadoresCliente)=> e._cxm_indicadorid_value == val.cxm_mx_cat_acl_indicadorid),
       }));
       setCatalogoIndicadores(indicadores);
-      console.log('indicadores: ', indicadores);
     };
     requestCatalogoIndicadores();
   }, [])
