@@ -4,20 +4,12 @@ export interface Dynamics {
   context: ComponentFramework.Context<IInputs>
 }
 
-export interface DataClient {
-  '@odata.context': string;
-  '@odata.etag': string;
-   cxm_clientereincidenteaclaraciones: boolean; 
-   cxm_clientevulnerableaclaraciones: boolean; 
-   cxm_clienterecurrenteaclaraciones: boolean; 
-   cxm_clientesensibleaclaraciones: boolean; 
-}
-
 export interface DataResponseIn {
   incidents:DataIncident
 }
 
 export interface DataIncident {
+  _customerid_value: string;
   '@odata.context': string;
   '@odata.etag': string;
   '_createdby_value@OData.Community.Display.V1.FormattedValue': string;
@@ -100,7 +92,6 @@ export interface DataProducto {
 }
 
 export interface DataDocumentos { 
-  // '@odata.etag': string;
   cxm_documentoentregado: boolean;
   createdon: Date;
   '_cxm_documentoid_value@OData.Community.Display.V1.FormattedValue':string;

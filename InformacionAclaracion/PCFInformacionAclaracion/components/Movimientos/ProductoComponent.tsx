@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { DataClient, DataProducto, Dynamics } from '../../interfaces/general';
+import React, { useState } from 'react';
+import { DataProducto } from '../../interfaces/general';
 import Documentos from '../Movimientos/DocumentosComponent';
 import { IncidentProps } from '../../interfaces/props';
 import { DataMovimiento } from '../../interfaces/general';

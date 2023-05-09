@@ -70,13 +70,11 @@ const InformacionAclaracion = (props: IncidentProps) => {
                         <span className="iac-cargo-doble">{dataIncident?.cxm_vozcliente}</span>
                     </div>
                     <div className="iac-datos-inte-fl">
-                        <span className="iac-tipo-aclaracin">
-                            <span className="text-style-1">Tipo: </span>
-                            <span>{dataIncident?.['casetypecode@OData.Community.Display.V1.FormattedValue']}</span>
-                        </span>
+                            <span className="iac-tipificacin-compra-2">Tipo: </span>
+                            <span className="iac-tipificacin-compra"> {dataIncident?.['casetypecode@OData.Community.Display.V1.FormattedValue']}</span>
                     </div>
                     <div className="iac-ta-left">
-                        <span className="iac-tipificacin-compra-2">Tipificación:</span>
+                        <span className="iac-tipificacin-compra-2">Tipificación: </span>
                         <span className="iac-tipificacin-compra"> {dataIncident?.['_cxm_categoriaid_value@OData.Community.Display.V1.FormattedValue']} {dataIncident['_cxm_subcategoriaid_value@OData.Community.Display.V1.FormattedValue']}</span>
                     </div>
                 </div>

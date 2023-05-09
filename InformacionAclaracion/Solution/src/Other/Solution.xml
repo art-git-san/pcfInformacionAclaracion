@@ -8,7 +8,7 @@
       <LocalizedName description="PCF Informacion Aclaracion" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>0.0.27</Version>
+    <Version>0.0.33</Version>
     <!-- Solution Package Type: Unmanaged(0)/Managed(1)/Both(2)-->
     <Managed>2</Managed>
     <Publisher>

@@ -10,47 +10,19 @@
   }
   
 img.Back-component-Copy {
-  /* width: 100%; */
-  /* margin: 0 -0.75rem; */
-  /* height: 1181px; */
-  /* margin: 16px 16px 32px; */
   width: 100%;
-  /* position: relative; */
-  /* z-index: 1;
-  display: flex; */
   font-size: 12px;
   font-family: SantanderText, Arial, Helvetica, sans-serif;
-
   padding: 0px !important;
 }
 
 .main-shadow { 
-  /* height: 333px;
-  padding: 0 16px;
-  background-color: white;
-  background-color: #fbfbfb;
-  width: 98%; */
-
   height: 333px;
   padding: 0 16px;
   background-color: white;
   background-color: #fbfbfb;
   width: 100%;
 }
-/* .front-shadow {
-  width: 1088px;
-  height: 848px;
-  padding: 0 16px;
-  background-color: var(--white);
-}
-.back-area {
-  width: 1365px;
-  height: 1463px;
-  margin: 38px 1px 0 0;
-  padding: 10px 0 0;
-  background-color: var(--white);
-} */
-/* ----------------------------------------------------------------- */
 .inac-alert {
   display: grid;
   grid-template-columns: 5fr 1fr;
@@ -107,7 +79,6 @@ img.Back-component-Copy {
   font-size: 12px;
   text-align: left;
 }
-/* ----------------------------------------------------------------- */
 /* ---------------------Encabezado---------------------------------- */
 .iac-info{
   padding-top: 2rem;
@@ -134,14 +105,6 @@ img.Back-component-Copy {
   color: #000;
 }
 .iac-gradient {
-  /* width: 169px;
-  height: 46px;
-  margin: 0px 0px 0px 80%;
-  padding: 0px 0px 0px 10px;
-  border-radius: 4px;
-  border: solid 1px #ececec;
-  background-color: #ffffff;
-  text-align: left; */
   width: 15%;
     height: 46px;
     margin: 0px 0px 0px 63%;
@@ -197,7 +160,6 @@ img.Back-component-Copy {
   letter-spacing: normal;
   color: #444;
 }
-/* ----------------------------------------------------------------- */
 /* -------------------Datos Info---------------------------------------------- */
 .iac-datos{
  display: grid; 
@@ -226,8 +188,6 @@ img.Back-component-Copy {
 }
 .iac-datos-inte-res{
    display: grid;
-    /* grid-template-rows: repeat(2, 1fr);
-    margin: 0px 0px 0px 0px; */
     padding: 10px;
     text-align: left;    
     border-bottom: 1px solid #ddd;
@@ -241,7 +201,6 @@ img.Back-component-Copy {
   margin: 0 5% 0 5%;
 }
 .iac-datos-col-lin{
-  /* width: 4px; */
   height: 40px;
   margin: 0px 0 2px;  
   display: grid;
@@ -264,7 +223,6 @@ img.Back-component-Copy {
   text-align: left;
   margin: 0px 0px 0px 10px;
 }
-
 .iac-oval {
   width: 40px;
   height: 40px;
@@ -284,8 +242,6 @@ img.Back-component-Copy {
   height: 19.1px;
   background-color: #444444;
 }
-
-
 /* SPAN */
 .iac-ej { 
   height: 14px;
@@ -300,7 +256,7 @@ img.Back-component-Copy {
   color: #767676;
 }
 .iac-esc {
-  width: 155px; 
+  min-width: 155px; 
   margin: 5px 0 0 8px;
   font-family: SantanderText;
   font-size: 14px;
@@ -326,7 +282,6 @@ img.Back-component-Copy {
 /* SPAN */
 /* SPAN  middle*/
 .iac-evaluacin-cuestiona {
-  /* margin: 5px 200px 0px 0px; */
   font-family: SantanderText;
   font-size: 10px;
   font-weight: normal;
@@ -337,7 +292,6 @@ img.Back-component-Copy {
   color: #767676;
 }
 .iac-cargo-doble {  
-  /* margin: 0px 230px 0px 0px; */
   font-family: SantanderText;
   font-size: 14px;
   font-weight: bold;
@@ -348,7 +302,6 @@ img.Back-component-Copy {
   color: #444;
 }
 .iac-tipo-aclaracin {
-  /* margin: 15px 240px 0px 20px; */
   font-family: SantanderText;
   font-size: 12px;
   font-weight: normal;
@@ -363,7 +316,6 @@ img.Back-component-Copy {
   color:#767676;
 }
 .iac-tipificacin-compra {
-  /* margin: 0px 0px 0px 10px; */
   font-family: SantanderText;
   font-size: 12px;
   font-weight: normal;
@@ -400,8 +352,6 @@ img.Back-component-Copy {
   line-height: normal;
   letter-spacing: normal;
   color: #767676;
-  /* margin: 0px 0px 0px 40px; */
-  
 }
 .iac-span-mov {
   text-align: center;
@@ -436,6 +386,7 @@ img.Back-component-Copy {
   letter-spacing: normal;
   text-align: right;
   color: #000;
+  text-align: center;
 }
 .iac-mxntext-style-1 {  
   margin: 5px 0px 0px 0px;
@@ -451,7 +402,6 @@ img.Back-component-Copy {
 }
 .iac-motor-normativo-Apl { 
   height: 18px;
-  /* margin: 15px 150px 0px 0px; */
   font-family: SantanderText;
   font-size: 12px;
   font-weight: normal;
@@ -461,7 +411,6 @@ img.Back-component-Copy {
   letter-spacing: normal;
   color: #767676;
   display: flex;
-  /* justify-content: center; */
 }
 .iac-motor-normativo-Apl .text-style-1 {
   color: #000;
@@ -469,7 +418,6 @@ img.Back-component-Copy {
 .iac-cadena-normativa-TD {
   width: 185px;
   height: 18px;
-  /* margin: 15px 110px 0px 16px; */
   font-family: SantanderText;
   font-size: 12px;
   font-weight: normal;
@@ -479,13 +427,10 @@ img.Back-component-Copy {
   letter-spacing: normal;
   color: #767676;
   display: flex;
-  /* justify-content: center; */
 }
 .iac-cadena-normativa-TD .text-style-1 {
   color: #000;
 }
-/* SPAN  last*/
-
 .iac-datos-recs {
   width: 346px;
   height: 74px;
@@ -541,4 +486,3 @@ img.Back-component-Copy {
   padding: 10px;
   margin: 0 5% 0 5%;
 }
-/* ----------------------------------------------------------------- */

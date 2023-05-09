@@ -16,7 +16,6 @@ const App = (props: Dynamics) => {
   
     const requestDataIncident = async () => {
     const data = await dataService.getDataAclaracion()
-    console.log(data.cxm_tipocasoalta);
     if(data.cxm_tipocasoalta!=3){
         const results = await dataService.getDataAclaracionMovs(data.cxm_tipocasoalta)        
         let responseD: DataIncident[] = [];
@@ -52,7 +51,7 @@ const App = (props: Dynamics) => {
 return <div className='img.Back-component-Copy'>  
     {DataIncident && <>  
      <InformacionAclaracion dataIncident={DataIncident}></InformacionAclaracion>
-     <ClienteAclaraciones {...props}></ClienteAclaraciones>
+     <ClienteAclaraciones dataIncident={DataIncident}></ClienteAclaraciones>
      <div className="aclinfo-main">  
         <div><span className="aclinfo-movimientos-span">MOVIMIENTOS</span></div>
         <div className="aclinfo-movimientos-line"></div>      
