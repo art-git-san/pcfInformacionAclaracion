@@ -1,187 +1,199 @@
 @import url("../../cxm_CSS_iconsStyle.css");
+
 @font-face {
   font-family: 'SantanderText';
   src: url("../../cxm_SantanderRegular.eot.css");
   src: url("../../cxm_SantanderRegular.eot.css") format("embedded-opentype"), url("../../cxm_SantanderRegular.ttf.css") format("truetype"), url("../../cxm_SantanderRegular.woff.css") format("woff");
 }
+
 /* Movimientos -----------------------------------------------------------------*/
-.aclinfo-main{
-    width: 98%;
-    padding: 0px 1%;
+.aclinfo-main {
+  width: 98%;
+  padding: 0px 1%;
 }
-.aclinfo-movimientos-span{
-    width: 77px;
-    height: 18px;   
-    font-family: SantanderText;
-    font-size: 12px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000;
-    display: flex;
-    justify-content: left;
-    margin-left: 0.5%;
+
+.aclinfo-movimientos-span {
+  width: 77px;
+  height: 18px;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  display: flex;
+  justify-content: left;
+  margin-left: 0.5%;
 }
-.aclinfo-movimientos-line{
-    width: 100%;
-    height: 2px;
-    margin: 4px 0 0;
-    background-color: #ffcc33;
-    /* margin-left: 1.5%; */
+
+.aclinfo-movimientos-line {
+  width: 100%;
+  height: 2px;
+  margin: 4px 0 0;
+  background-color: #ffcc33;
+  /* margin-left: 1.5%; */
 }
+
 .aclinfo-rectangle {
-    width: 100%;
-    height: 3px;   
-    background-color: #cccccc;
-  }
-  .aclinfo-back {
-    width: 170px;
-    height: 29px;
-    margin: 40px auto;
-    padding: 4px 16px;
-    border-radius: 2px;
-    background-color: #ec0000;
-   }
-   .aclinfo-back:hover {
-    background-color:  #ec000067;
-  }
-   .aclinfo-label-fin {
-    width: 138px;
-    height: 21px;
-    font-family: SegoeUI;
-    font-size: 16px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-  }
+  width: 100%;
+  height: 3px;
+  background-color: #cccccc;
+}
+
+.aclinfo-back {
+  width: 170px;
+  height: 29px;
+  margin: 40px auto;
+  padding: 4px 16px;
+  border-radius: 2px;
+  background-color: #ec0000;
+}
+
+.aclinfo-back:hover {
+  background-color: #ec000067;
+}
+
+.aclinfo-label-fin {
+  width: 138px;
+  height: 21px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
 /* /Movimientos -----------------------------------------------------------------*/
 /* Producto -----------------------------------------------------------------*/
-.aclinfo-prod{
-    border-radius: 4px;
-    background-color: #f6f6f6;
-
-    margin-top: 0.5%;
-
-    animation: 1s ease-out 0s 1 slideInFromTop;
+.aclinfo-prod {
+  border-radius: 4px;
+  background-color: #f6f6f6;
+  margin-top: 0.5%;
+  animation: 1s ease-out 0s 1 slideInFromTop;
 }
-.aclinfo-grid-prod-first{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 0.3fr;
-    border-bottom: 1px solid #ddd;
-    height: 48.6px;
-    cursor: pointer;
-    
+
+.aclinfo-grid-prod-first {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 0.3fr;
+  border-bottom: 1px solid #ddd;
+  height: 48.6px;
+  cursor: pointer;
 }
-.aclinfo-grid-prod-first:hover{
+
+.aclinfo-grid-prod-first:hover {
   background-color: #fcfcfc;
 }
+
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(0);
   }
 }
-.aclinfo-grid-prod-second{
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr);
-    border-bottom: 1px solid #ddd;
-    height: 48.6px;
 
-    /* animation: 1s ease-out 0s 1 slideInFromTop; */
+.aclinfo-grid-prod-second {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #ddd;
+  height: 48.6px;
 }
-.aclinfo-grid-prod-third{
-    display: grid; 
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
-    height: 48.6px; */
-    grid-template-columns: 1.5fr 0.7fr 1.3fr 1.2fr 1.2fr 0.7fr 1.2fr 1.2fr 3fr;
-    height: 48.66px;
 
-    /* animation: 1s ease-out 0s 1 slideInFromTop; */
+.aclinfo-grid-prod-third {
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr 1.3fr 1.2fr 1.2fr 0.7fr 1.2fr 1.2fr 3fr;
+  height: 48.66px;
 }
-.aclinfo-cell{
-    display: flex;
+
+.aclinfo-cell {
+  display: flex;
 }
-.aclinfo-cell-bgc{  
+
+.aclinfo-cell-bgc {
   height: 97%;
   display: grid;
-  background-color:  #f6f6f6;
+  background-color: #f6f6f6;
   justify-content: center;
 }
-.aclinfo-cell-div{  
-    width: 1px;
-    height: 32px;
-    margin: 0 16px;
-    background-color: #d8d8d8;
+
+.aclinfo-cell-div {
+  width: 1px;
+  height: 32px;
+  margin: 0 16px;
+  background-color: #d8d8d8;
 }
+
 .aclinfo-cell-spa {
   width: 1px;
   height: 32px;
   margin: 0 9px;
-  background-color: #f6f6f6;;
+  background-color: #f6f6f6;
+  ;
 }
-.cell-div-mt{  
-   margin-top: 8px;
-}
-.aclinfo-cell-lbls{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    text-align: left;
-}
-.aclinfo-cell-padding{
-    padding-left: 5px;
-    padding-top: 5px;
-}
-.isan-FUNC123 { 
-    margin: 0px 8px 0 0;
-    object-fit: contain;
-    color: #ec0000;
-    font-size: 23px;
-  }
-  .isan-DOC014{
-    font-size: 18px;
-    object-fit: contain;
-  }
-  .isan-BAN036 { 
-    margin: 0px 8px 0 0;
-    object-fit: contain;
-    color: #ec0000;
-    font-size: 24px;
-  }
-  .aclinfo-header-tdc{
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.35);
-    border-radius: 2px;
 
-    width: 16px;
-    height: 24px;
-    margin-bottom: 7px;
-    margin-right: 10%;
-  }
-/* Labels ----------------------------------------------------------------- */
-.aclinfo-lbl-like{
-    /* width: 95px;
-    height: 20px;
-    margin: 2px 0 2px 8px;
-    font-family: SantanderHeadline; */
-    font-size: 14px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000;
-    display: flex;
-    padding: 10px;
+.cell-div-mt {
+  margin-top: 8px;
 }
-.aclinfo-lbl{
-  /* width: 104px;
-  height: 14px; */
+
+.aclinfo-cell-lbls {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  text-align: left;
+}
+
+.aclinfo-cell-padding {
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.isan-FUNC123 {
+  margin: 0px 8px 0 0;
+  object-fit: contain;
+  color: #ec0000;
+  font-size: 23px;
+}
+
+.isan-DOC014 {
+  font-size: 18px;
+  object-fit: contain;
+}
+
+.isan-BAN036 {
+  margin: 0px 8px 0 0;
+  object-fit: contain;
+  color: #ec0000;
+  font-size: 24px;
+}
+
+.aclinfo-header-tdc {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+  width: 16px;
+  height: 24px;
+  margin-bottom: 7px;
+  margin-right: 10%;
+}
+
+/* Labels ----------------------------------------------------------------- */
+.aclinfo-lbl-like {
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  display: flex;
+  padding: 10px;
+}
+
+.aclinfo-lbl {
   font-family: SantanderText;
   font-size: 10px;
   font-weight: normal;
@@ -192,10 +204,8 @@
   color: #767676;
   text-align: left;
 }
-.aclinfo-lbl-val{
-  /* width: 111px;
-  height: 18px; */
-  /* margin: 14px 0 0; */
+
+.aclinfo-lbl-val {
   font-family: SantanderText;
   font-size: 12px;
   font-weight: normal;
@@ -205,167 +215,170 @@
   letter-spacing: normal;
   color: #000;
 }
-.aclinfo-lbl-val-grape{
-    /* width: 111px;
-    height: 18px; */
-    /* margin: 14px 0 0; */
-    font-family: SantanderText;
-    font-size: 12px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #732645;
-  }
-/* /Labels ----------------------------------------------------------------- */
 
-.aclinfo-btn{
-    width: 66%;
-    height: 19px;
-    margin: 6px auto;
-    /* padding: 4px 8px; */
-    border-radius: 2px;
-    border: solid 1px #3366ff;
-    text-align: center;
+.aclinfo-lbl-val-grape {
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #732645;
 }
-.aclinfo-lbl-btn{
-    width: 51px;
-    height: 11px;
-    font-family: OpenSans;
-    font-size: 8px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #3366ff;  
-    position: relative;
-    top: -4px;
-    /* margin-left: 20%; */
+
+/* /Labels ----------------------------------------------------------------- */
+.aclinfo-btn {
+  width: 66%;
+  height: 19px;
+  margin: 6px auto;
+  border-radius: 2px;
+  border: solid 1px #3366ff;
+  text-align: center;
 }
-.acli-ml{
+
+.aclinfo-lbl-btn {
+  width: 51px;
+  height: 11px;
+  font-size: 8px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3366ff;
+  position: relative;
+  top: -4px;
+}
+
+.acli-ml {
   margin-left: 15%;
 }
+
 .aclinfo-mask {
-    width: 15px;
-    height: 24px;
-    margin: 0 8px 0 0;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24);
-    background-color: #f0f0f0;
-  }
+  width: 15px;
+  height: 24px;
+  margin: 0 8px 0 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24);
+  background-color: #f0f0f0;
+}
+
 /* /Producto -----------------------------------------------------------------*/
 /* Documentos -----------------------------------------------------------------*/
-    .aclinfo-al-iz{
-        text-align: left;
-    }
-    .aclinfo-al-cen{
-        text-align: center;       
-    }
-   .aclinfo-tabla-docs{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 5fr 0.5fr 0.5fr;
-    /* grid-template-rows: 2fr 2fr 1fr; */
-    border-bottom: 1px solid #ddd;
-   }
-   .aclinfo-tabla-docs-Not{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 5fr;
-    /* grid-template-rows: 2fr 2fr 1fr; */
-    border-bottom: 1px solid #ddd;
-   }
-   .bt-1{
-    border-top: 1px solid #ddd;
-   }
-   .pl-1{
-    padding: 3px;
-    height: 32px;
-   }
-   .pl-2{
-    padding: 3px;
-    height: 26px;
-   }
-   /* Spans  -----------------------------------------------------------------*/
-   .aclinfo-cell-docs{
-    width: 62px;
-    height: 14px;
-    font-family: SantanderText;
-    font-size: 10px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #767676;
-   }
-   .aclinfo-cell-docs-val{
-    width: 29px;
-    height: 18px;
-    font-family: SantanderText;
-    font-size: 12px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #323130;
-   }
-   .aclinfo-documentos{
-    width: 125px;
-    height: 18px !important;
-    margin: 0 919px 4px 12px;
-    font-family: SantanderText;
-    font-size: 12px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #444;
-    display: inline-block;
-  }
-  .aclinfo-doc-btn{
-    width: 400%;
-    height: 22px;
-    margin: 6px auto;
-    /* padding: 4px 8px; */
-    border-radius: 2px;
-    /* border: solid 1px #32ac65; */
-    border: solid 1px #1c9e52;
-    text-align: center;
+.aclinfo-al-iz {
+  text-align: left;
 }
-.aclinfo-doc-lbl-btn{
-    width: 51px;
-    height: 11px;
-    /* font-family: OpenSans; */
-    font-size: 9px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #1c9e52;  
-    position: relative;
-    top: 2px;
-    /* margin-left: 13%; */
+
+.aclinfo-al-cen {
+  text-align: center;
 }
+
+.aclinfo-tabla-docs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 5fr 0.5fr 0.5fr;
+  border-bottom: 1px solid #ddd;
+}
+
+.aclinfo-tabla-docs-Not {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 5fr;
+  border-bottom: 1px solid #ddd;
+}
+
+.bt-1 {
+  border-top: 1px solid #ddd;
+}
+
+.pl-1 {
+  padding: 3px;
+  height: 32px;
+}
+
+.pl-2 {
+  padding: 3px;
+  height: 26px;
+}
+
+/* Spans  -----------------------------------------------------------------*/
+.aclinfo-cell-docs {
+  width: 62px;
+  height: 14px;
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+}
+
+.aclinfo-cell-docs-val {
+  width: 29px;
+  height: 18px;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #323130;
+}
+
+.aclinfo-documentos {
+  width: 125px;
+  height: 18px !important;
+  margin: 0 919px 4px 12px;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+  display: inline-block;
+}
+
+.aclinfo-doc-btn {
+  width: 400%;
+  height: 22px;
+  margin: 6px auto;
+  border-radius: 2px;
+  border: solid 1px #1c9e52;
+  text-align: center;
+}
+
+.aclinfo-doc-lbl-btn {
+  width: 51px;
+  height: 11px;
+  font-size: 9px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1c9e52;
+  position: relative;
+  top: 2px;
+}
+
 .aclinfo-not-btn {
   width: 50%;
   height: 22px;
   margin: 6px auto;
-  /* padding: 4px 8px; */
   border-radius: 2px;
-  /* border: solid 1px #32ac65; */
   border: solid 1.8px #ec0000;
   text-align: center;
 }
-.aclinfo-not-lbl-btn{
+
+.aclinfo-not-lbl-btn {
   width: 51px;
   height: 11px;
-  /* font-family: OpenSans; */
   font-size: 10px;
   font-weight: bold;
   font-stretch: normal;
@@ -373,86 +386,86 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #ec0000;  
+  color: #ec0000;
   position: relative;
-  top: -2px; 
+  top: -2px;
 }
 
-   /* /Spans  -----------------------------------------------------------------*/
-/* /Documentos -----------------------------------------------------------------*/
-/* Funciones -----------------------------------------------------------------*/
-.aclinfo-func{
-    display: grid; 
-    grid-template-columns: 1.35fr 2.30fr 6fr;  
-    height: 68px;
-    padding: 2%;
+.aclinfo-func {
+  display: grid;
+  grid-template-columns: 1.35fr 2.30fr 6fr;
+  height: 68px;
+  padding: 2%;
 }
-/* new--------------------------------------------------------- */
-.aclinfo-func2{
-  display: grid; 
-  grid-template-columns: 3.7fr 6fr;  
+
+.aclinfo-func2 {
+  display: grid;
+  grid-template-columns: 3.7fr 6fr;
   height: 68px;
   padding: 2% 0 2% 0%;
 }
-/* new--------------------------------------------------------- */
 
-.aclinfo-select{
-    /* display: inline-block; */
-    width: 161px;
-    /* height: 30px; */
-    margin: 4px 0 0;
-    padding: 6px 8px;
-    border-radius: 3px;
-    border: solid 1px #ddd;
+.aclinfo-select {
+  width: 161px;
+  margin: 4px 0 0;
+  padding: 6px 8px;
+  border-radius: 3px;
+  border: solid 1px #ddd;
+  margin: 0 8px 0 0;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+}
 
-    /* width: 127px;
-    height: 18px; */
-    margin: 0 8px 0 0;
-    font-family: SantanderText;
-    font-size: 12px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #444;
+.m-select {
+  margin-left: 15px;
 }
-.m-select{
-    margin-left: 15px;
-}
-.aclinfo-div-select{
-    display: inline-block;
-}
-.cell-div {   
-    height: 54px;
-}
-/* Spans  -----------------------------------------------------------------*/
-.aclinfo-proc-alt{
-    width: 93px;
-    height: 18px;
-    /* margin: 0 64px 4px 4px; */
-    font-family: SantanderText;
-    font-size: 12px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #444;
-  }
-  .aclinfo-notificacin-clien{
-    width: 276px;
-    height: 18px;
-    margin: 0 125px 4px 4px;
-    font-family: SantanderText;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;   
-    line-height: normal;
-    letter-spacing: normal;
-    color: #444;
-  }
 
-  /* Spans ----------------------------------------------------------------- */
-/* /Funciones -----------------------------------------------------------------*/
+.aclinfo-div-select {
+  display: inline-block;
+}
+
+.cell-div {
+  height: 54px;
+}
+
+.aclinfo-proc-alt {
+  width: 93px;
+  height: 18px;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+}
+
+.aclinfo-notificacin-clien {
+  width: 276px;
+  height: 18px;
+  margin: 0 125px 4px 4px;
+  font-family: SantanderText;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444;
+}
+
+.aclinfo-sin-notifificaciones {
+  font-size: 12px;
+  font-style: italic;
+  color: #ddd;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}

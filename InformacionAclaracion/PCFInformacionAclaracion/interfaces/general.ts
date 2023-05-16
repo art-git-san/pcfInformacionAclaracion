@@ -117,3 +117,10 @@ export interface CatalogoIndicadores {
 export interface DataIndicadoresCliente {
   _cxm_indicadorid_value:string;
 }
+
+export interface DataNotificaciones {
+  cxm_estatus: string;
+  "createdon@OData.Community.Display.V1.FormattedValue": string;
+  createdon: Date;
+  cxm_procedencia: string;
+}

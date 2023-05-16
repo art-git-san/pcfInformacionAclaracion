@@ -417,6 +417,30 @@ export class DataService {
     return {} as any;
   }
 
+  async getDataNotificaciones(incidentid: string, fecha: string): Promise<any> {
+    let reqData = await this.requestGet("/api/data/v9.2/cxm_cxm_mx_mst_acl_notificacioneses?$select=cxm_estatus,createdon,cxm_procedencia&$filter=_cxm_incidentid_value eq " + incidentid);
+    if (reqData.ok)
+      return reqData.data
+    else if (typeof Xrm === "undefined")
+      return {
+        "value": [
+          {
+            "cxm_estatus": "Revisión",
+            "createdon@OData.Community.Display.V1.FormattedValue": "16/05/2023 05:21 p. m.",
+            "createdon": "2023-05-16T22:21:33Z",
+            "cxm_procedencia": "Comercio2",
+          },
+          {
+            "cxm_estatus": "Devolución realizada",
+            "createdon@OData.Community.Display.V1.FormattedValue": "16/05/2023 05:12 p. m.",
+            "createdon": "2023-05-16T22:12:15Z",
+            "cxm_procedencia": "Comercio",
+          }
+        ]
+      }
+    return {} as any;
+  }
+
   private async request(url: string, method: string, body?: any): Promise<ResponseInterface> {
     let resReq: ResponseInterface = { url: url };
     let initReq: RequestInit = {
