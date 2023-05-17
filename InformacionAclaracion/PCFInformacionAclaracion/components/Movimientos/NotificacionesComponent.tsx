@@ -7,8 +7,13 @@ const Notificaciones = (props: any) => {
     const dataService = new DataService();
     const [dataNotificaciones, setDataNotificaciones] = useState<DataNotificaciones[]>();
     useEffect(() => {
+
         const requestDataNotificaciones = async () => {
-            const reponseNotificaciones = await dataService.getDataNotificaciones(dataIncident.incidentid, "");
+            const fechaActual = new Date();
+            fechaActual.setFullYear(fechaActual.getFullYear() - 1);
+            const fechaConsulta = fechaActual.toISOString().slice(0, 10);
+            console.log('fechaConsulta: ', fechaConsulta);
+            const reponseNotificaciones = await dataService.getDataNotificaciones(dataIncident.incidentid, fechaConsulta);
             setDataNotificaciones(reponseNotificaciones.value);
         };
         requestDataNotificaciones();
@@ -16,7 +21,7 @@ const Notificaciones = (props: any) => {
 
     const formatDate = (date: Date) => {
         function pad(s: any) { return (s < 10) ? '0' + s : s; }
-        var d = new Date(date)
+        const d = new Date(date)
         return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('/');
     }
     return (

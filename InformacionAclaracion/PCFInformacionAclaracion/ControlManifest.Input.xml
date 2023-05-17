@@ -9,14 +9,14 @@
       <css path="css/PCFInformacionAclaracion.css" order="1" />   
       <css path="css/PCFClienteAclaraciones.css" order="1" />   
       <css path="css/pcfMovimientos.css" order="1" />  
-      <!-- <css path="../../cxm_CSS_iconsStyle.css" order="1"/>
+      <!--<css path="../../cxm_CSS_iconsStyle.css" order="1"/>
       <css path="../../cxm_iconsSantander.eot.css" order="1"/>
       <css path="../../cxm_iconsSantander.svg.css" order="1"/>
       <css path="../../cxm_iconsSantander.ttf.css" order="1"/>
       <css path="../../cxm_iconsSantander.woff.css" order="1"/>
       <css path="../../cxm_santanderRegular.woff.css" order="1"/>
       <css path="../../cxm_santanderRegular.eot.css" order="1"/>
-      <css path="../../cxm_santanderRegular.ttf.css" order="1"/>   -->
+      <css path="../../cxm_santanderRegular.ttf.css" order="1"/>-->
     </resources>   
   </control>
 </manifest>

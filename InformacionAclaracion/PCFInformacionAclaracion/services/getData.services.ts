@@ -418,7 +418,9 @@ export class DataService {
   }
 
   async getDataNotificaciones(incidentid: string, fecha: string): Promise<any> {
-    let reqData = await this.requestGet("/api/data/v9.2/cxm_cxm_mx_mst_acl_notificacioneses?$select=cxm_estatus,createdon,cxm_procedencia&$filter=_cxm_incidentid_value eq " + incidentid);
+    let reqData = await this.requestGet("/api/data/v9.2/cxm_cxm_mx_mst_acl_notificacioneses"
+      + "?$select=cxm_estatus,createdon,cxm_procedencia"
+      + "&$filter=_cxm_incidentid_value eq " + incidentid + " and createdon ge " + fecha + "T00:00:00.000Z");
     if (reqData.ok)
       return reqData.data
     else if (typeof Xrm === "undefined")
